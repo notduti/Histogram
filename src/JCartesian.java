@@ -83,6 +83,7 @@ public class JCartesian extends JGraph {
         int height = -(y2p - y1p);
         super.drawRect(x1p, y2p, width, height, color);
     }
+
     public void fillRect(double x1, double y1, double x2, double y2, Color color) {
 
         int x1p = this.xToPanel(x1);
@@ -92,5 +93,12 @@ public class JCartesian extends JGraph {
         int width = x2p - x1p;
         int height = -(y2p - y1p);
         super.fillRect(x1p, y2p, width, height, color);
+    }
+
+    public void drawString(double x, double y, String text, Color color) {
+
+        int xp = this.xToPanel(x);
+        int yp = this.yToPanel(y);
+        super.drawString(xp, yp, text, color);
     }
 }

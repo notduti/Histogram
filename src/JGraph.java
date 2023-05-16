@@ -124,4 +124,12 @@ public class JGraph extends JPanel {
         graph.fillRect(x, y, width, height);
         repaint();
     }
+
+    public void drawString(int x, int y, String text, Color color) {
+
+        Graphics2D graph = this.image.createGraphics();
+        graph.setColor(color);
+        graph.drawString(text, x, y);
+        repaint();
+    }
 }
